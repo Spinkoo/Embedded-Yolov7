@@ -1,0 +1,5 @@
+onnxruntime==1.9.0
+onnx==1.9.0
+torch
+numpy
+cv2

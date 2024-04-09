@@ -1,0 +1,12 @@
+#!/bin/sh
+
+gcc  -c generated/network_data_params.c -Iinclude/ -Igenerated/  -o network_data_params.o
+
+gcc  -c generated/network_data.c -Iinclude/ -Igenerated/  -o network_data.o
+
+gcc  -c generated/network.c -Iinclude/ -Igenerated/  -o network.o
+
+ g++  -c Source.cpp -Iinclude/ -Igenerated/  -o Source.o
+ 
+g++ Source.o network.o network_data.o network_data_params.o -L./lib/static -lruntime -lst_cmsis_nn -lcmsis-nn -lx86_cmsis -lm  -o out 
+

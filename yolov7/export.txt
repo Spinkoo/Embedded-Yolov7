@@ -1,0 +1,1 @@
+python export.py --weights  yolov7-tiny.pt --simplify --img-size 640 640 --max-wh 640 --custom_export
