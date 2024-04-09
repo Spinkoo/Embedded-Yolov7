@@ -11,10 +11,10 @@ The primary goal of this project is to enable efficient and flexible deployment 
 ## The project is divided into six main components:
 
 1. **ONNX Model Conversion and Quantization into QInt8**
-2. **Export the main core of Yolov7 into ONNX**
+2. **Export the main core of YOLOv7 into ONNX**
 3. **Python Inference engine for a Quantized and Compressed YOLOv7**
 4. **C++ Inference engine for a Quantized and Compressed YOLOv7 (soon to come)**
-5. **Apply various STM32ai toolbox features on a YOLO ! (soon to come)**
+5. **Apply various [STM32ai toolbox](https://stm32ai.st.com/)  features on a YOLO ! (soon to come)**
 6. **Generate static code C of your model and deploy on low-cost microcontroller (soon to come)**
 
 ## License

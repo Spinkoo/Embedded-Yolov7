@@ -1,6 +1,8 @@
 # **ONNX Model Conversion and Quantization** :
 
-This involves converting a YOLO model to ONNX format and optionally quantizing it to reduce model size and improve inference speed. The conversion and quantization process is handled by the `onnx_quant.py` script.
+This component allows for model reduction and in order to enhance inference speed. The conversion and quantization process is handled by the `onnx_quant.py` script.
+
+The example used in this repo is the pretrained and out of the box YOLOv7-tiny 
 
 ### Prerequisites
 
