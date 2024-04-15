@@ -17,6 +17,12 @@ The primary goal of this project is to enable efficient and flexible deployment 
 5. **Apply various [STM32ai toolbox](https://stm32ai.st.com/)  features on a YOLO ! (soon to come)**
 6. **Generate static code C of your model and deploy on low-cost microcontroller (soon to come)**
 
+The intended pipeline is as follow : Train your object detector => Export it into ONNX => Quantize / Compress your model using ONNXRUNTIME or STM32ai => Run inference on Python on "large enough" => Deploy into microcontroller
+
+The following table contains a benchmark test using tiny-yolov7 on different devices with certain optimizations
+**TODO**
+
+#### A fine amount of the software can be used for various neural networks as long as the layers are supported by ONNXRUNTIME and STM32ai
 ## License
 This project is licensed under the  GNU License.
 
