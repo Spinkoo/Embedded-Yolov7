@@ -1,29 +1,82 @@
-# Object detection on small and cost-efficient devices
+# YOLOv7 ONNX Inference for Embedded Systems
 
-#### Compress, Deploy and Infer Yolov7 on STM32 chips and low-energy microcontrollers
+**Compress, Deploy and Infer YOLOv7 on STM32 chips and low-energy microcontrollers**
+
 ![Main picture](./images/algo.png)
-# YOLOv7 ONNX Inference
 
-This repository contains code for performing inference using a YOLO (You Only Look Once) model that has been converted to ONNX (Open Neural Network Exchange) format. 
+## Project Overview
 
-The primary goal of this project is to enable efficient and flexible deployment of YOLO models for object detection tasks, especially on STM32 chips.
+This repository contains a comprehensive framework for performing inference using YOLO (You Only Look Once) models converted to ONNX (Open Neural Network Exchange) format, with a specific focus on deployment on embedded systems like STM32 microcontrollers.
 
-## The project is divided into six main components:
+The primary goal is to enable efficient and flexible deployment of YOLOv7 models for object detection tasks on resource-constrained devices through model quantization, compression, and optimized inference engines.
 
-1. **ONNX Model Conversion and Quantization into QInt8**
-2. **Export the main core of YOLOv7 into ONNX**
-3. **Python Inference engine for a Quantized and Compressed YOLOv7**
-4. **C++ Inference engine for a Quantized and Compressed YOLOv7 (soon to come)**
-5. **Apply various [STM32ai toolbox](https://stm32ai.st.com/)  features on a YOLO ! (soon to come)**
-6. **Generate static code C of your model and deploy on low-cost microcontroller (soon to come)**
+## Project Components
 
-The intended pipeline is as follow : Train your object detector => Export it into ONNX => Quantize / Compress your model using ONNXRUNTIME or STM32ai => Run inference on Python on "large enough" => Deploy into microcontroller
+The project is organized into the following main modules:
 
-The following table contains a benchmark test using tiny-yolov7 on different devices with certain optimizations
-**TODO**
+1. **`yolov7/`** - Original YOLOv7 model implementation with training and deployment utilities
+2. **`yolo-quant/`** - Model quantization tools to compress YOLOv7 into QInt8 format
+3. **`onnx-python-inference/`** - Python inference engine for quantized and compressed YOLOv7 models
+4. **`stm32_toolbox/`** - STM32AI toolbox integration and embedded C/C++ code generation
+5. **`yolov7-export/`** - ONNX export tools for YOLOv7 model conversion
 
-#### A fine amount of the software can be used for various neural networks as long as the layers are supported by ONNXRUNTIME and STM32ai
+## Development Pipeline
+
+The intended workflow for this project is:
+
+```
+Train Model → Export to ONNX → Quantize/Compress → Python Inference → Deploy to Microcontroller
+```
+
+**Detailed steps:**
+1. Train your YOLOv7 object detector
+2. Export the trained model to ONNX format
+3. Quantize and compress the model using ONNXRUNTIME or STM32AI
+4. Run inference tests on Python on desktop hardware
+5. Generate optimized C code and deploy on STM32 microcontroller
+
+## Key Features
+
+- ✅ Full YOLOv7 model conversion to ONNX format
+- ✅ Model quantization into QInt8 for reduced model size
+- ✅ Python inference engine with optimized post-processing
+- ✅ STM32AI integration for microcontroller deployment
+- ⏳ C++ inference engine (in progress)
+- ⏳ Automated static C code generation (coming soon)
+
+## Supported Networks
+
+The inference engines support various neural network architectures and layer types, as long as they are compatible with:
+- ONNXRUNTIME
+- STM32AI toolbox
+
+## Project Structure
+
+```
+Embedded-Yolov7/
+├── yolov7/                      # YOLOv7 training and model code
+├── yolo-quant/                  # Quantization utilities
+├── onnx-python-inference/       # Python inference implementation
+├── stm32_toolbox/               # STM32 embedded deployment guide
+├── images/                      # Documentation images
+├── LICENSE.md
+└── README.md
+```
+
+## Getting Started
+
+1. Review the README in the specific module you want to work with:
+   - For **training and exporting**: See `yolov7/README.md`
+   - For **quantization**: See `yolo-quant/README.md`
+   - For **Python inference**: See `onnx-python-inference/README.md`
+   - For **STM32 deployment**: See `stm32_toolbox/README.md`
+
+2. Install dependencies for your target module (see module-specific `requirements.txt`)
+
+3. Follow the module-specific documentation for your use case
+
 ## License
-This project is licensed under the  GNU License.
+
+This project is licensed under the GNU License. See `LICENSE.md` for details.
 
 
