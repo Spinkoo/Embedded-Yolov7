@@ -1,7 +1,7 @@
 # Object detection on small and cost-efficient devices
 
 #### Compress, Deploy and Infer Yolov7 on STM32 chips and low-energy microcontrollers
-![Main picture](./repo/algo.png)
+![Main picture](./images/algo.png)
 # YOLOv7 ONNX Inference
 
 This repository contains code for performing inference using a YOLO (You Only Look Once) model that has been converted to ONNX (Open Neural Network Exchange) format. 

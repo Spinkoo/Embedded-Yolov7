@@ -1,3 +1,0 @@
-Run validate of stm32ai then generate, replace content of stm32ai_ws/../generated with stm32ai_output/*
-
-run builds
